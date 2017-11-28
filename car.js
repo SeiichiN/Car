@@ -15,12 +15,12 @@ class Car {
             this._userGear = value;
     }
     get userSpeed() { return this._speed; }
-    set accel() {
-        this.speed++;
+    accel() {
+        this._speed++;
         let target = document.getElementById('speed');
         target.innerHTML = `${car1.userSpeed}`;
     }
-    set brake() {
+    brake() {
         this._speed--;
         if (this._speed < 0)
             this._speed = 0;
@@ -70,6 +70,12 @@ function shift_d() {
 function pr_gear(){
     let target = document.getElementById("now-gear");
     target.innerHTML = `${car1.userGear}`;
+}
+function accel() {
+    car1.accel();
+}
+function brake() {
+    car1.brake();
 }
 function status() {
     let target1 = document.getElementById("car-make");
