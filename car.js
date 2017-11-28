@@ -3,34 +3,41 @@ class Car {
     constructor(make, model) {
         this.make = make;
         this.model = model;
-        this._userGears = ['P', 'N', 'R', 'D'];
+        this._userGears = ['P', 'R', 'N', 'D'];
         this._userGear = this._userGears[0];
         this._speed = 0;
    }
 
     get userGear() { return this._userGear; }
     set userGear(value) {
-            if (this._userGears.indexOf(value) < 0)
-                throw new Error(`ギア指定が正しくない: ${value}`);
-            this._userGear = value;
+        if (this._userGears.indexOf(value) < 0)
+            throw new Error(`ギア指定が正しくない: ${value}`);
+        else if (this._userGears.indexOf(value) < 2 &&
+                 this._speed > 0)
+            throw new Error(`走行中にギヤチェンジはできない: ${value}`);
+        this._userGear = value;
     }
     get userSpeed() { return this._speed; }
     accel() {
         this._speed++;
-        let target = document.getElementById('speed');
-        target.innerHTML = `${car1.userSpeed}`;
     }
     brake() {
         this._speed--;
         if (this._speed < 0)
             this._speed = 0;
-        let target = document.getElementById('speed');
-        target.innerHTML = `${car1.userSpeed}`;
     }
     
     
     
-    shift(gear) { this.userGear = gear; }
+    shift(gear) {
+        try {
+            this.userGear = gear;
+        } catch (e) {
+            let target = document.getElementById("err-mes");
+            target.innerHTML = `${e.message}`;
+        //    console.log(e.message);
+        }
+    }
 } /* class Car */
 
 const car1 = new Car("Tesla", "Model S");
@@ -73,9 +80,13 @@ function pr_gear(){
 }
 function accel() {
     car1.accel();
+    let target = document.getElementById('speed');
+    target.innerHTML = `${car1.userSpeed}`;
 }
 function brake() {
     car1.brake();
+    let target = document.getElementById('speed');
+    target.innerHTML = `${car1.userSpeed}`;
 }
 function status() {
     let target1 = document.getElementById("car-make");
