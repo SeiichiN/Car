@@ -1,41 +1,42 @@
 <!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>car</title>
-    <link rel="stylesheet" href="car.css">
+    <head>
+        <meta charset="utf-8">
+        <title>car</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+        <link rel="stylesheet" href="car.css">
 
-</head>
-<body>
-    <div id="wrap">
-        <header>
-            <h1>ドライブ</h1>
-        </header>
-        <article class="clearfix">
-            <div class="left">
-                <button onclick="status()"> STATUS </button>
-                <div id="car-make"></div>
-                <div id="car-model"></div>
-                <div id="car-gear"></div>
-            </div>
-            
-            <div class="right">
-                <button onclick="shift_p()"> P </button>
-                <button onclick="shift_r()"> R </button>
-                <button onclick="shift_n()"> N </button>
-                <button onclick="shift_d()"> D </button>
-                <div> ギヤ: <span id="now-gear"></span></div>
-                <button onclick="accel()">アクセル</button>
-                <button onclick="brake()">ブレーキ</button>
-                <div> 速度: <span id="speed"></span></div>
-                <div><span id="err-mes"></span></div>
-            </div>
-            
-        </article>
-        <footer>
-            <small>&copy; 2017 Seiichi Nukayama</small>
-        </footer>
-    </div><!-- #wrap -->
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1>ドライブ</h1>
+            </header>
+            <article class="clearfix">
+                <div class="left">
+                    <button onclick="status()"> STATUS </button>
+                    <div id="car-make"></div>
+                    <div id="car-model"></div>
+                    <div id="car-gear"></div>
+                </div>
+                
+                <div class="right">
+                    <button onclick="shift_p()"> P </button>
+                    <button onclick="shift_r()"> R </button>
+                    <button onclick="shift_n()"> N </button>
+                    <button onclick="shift_d()"> D </button>
+                    <div> ギヤ: <span id="now-gear"></span></div>
+                    <button onclick="accel()">アクセル</button>
+                    <button onclick="brake()">ブレーキ</button>
+                    <div> 速度: <span id="speed"></span></div>
+                    <div><span id="err-mes"></span></div>
+                </div>
+                
+            </article>
+            <footer>
+                <small>&copy; 2017 Seiichi Nukayama</small>
+            </footer>
+        </div><!-- #wrap -->
     <script src="car.js"></script>
 </body>
 </html>

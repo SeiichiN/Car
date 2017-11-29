@@ -35,6 +35,7 @@ class Car {
         } catch (e) {
             let target = document.getElementById("err-mes");
             target.innerHTML = `${e.message}`;
+            startTimer();
         //    console.log(e.message);
         }
     }
@@ -42,21 +43,27 @@ class Car {
 
 const car1 = new Car("Tesla", "Model S");
 const car2 = new Car("Mazda", "3i");
-console.log(car1);
-console.log(car2);
-
-car1.shift('D');
-car2.shift('R');
-
-console.log(car1.userGear);
-console.log(car2.userGear);
-
-try {
-    car1.userGear = 'N';
-    console.log(car1.userGear);
-    car1.userGear = "X";
-} catch (e) {
-    console.log(e.message, e.name);
+/* console.log(car1);
+ * console.log(car2);
+ * 
+ * car1.shift('D');
+ * car2.shift('R');
+ * 
+ * console.log(car1.userGear);
+ * console.log(car2.userGear);
+ * 
+ * try {
+ *     car1.userGear = 'N';
+ *     console.log(car1.userGear);
+ *     car1.userGear = "X";
+ * } catch (e) {
+ *     console.log(e.message, e.name);
+ * }*/
+function startTimer() {
+    let timerId = setTimeout(function() {
+        let target = document.getElementById("err-mes");
+        target.innerHTML = "";
+    }, 3000);
 }
 function shift_p() {
     car1.shift('P');

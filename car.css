@@ -9,18 +9,27 @@
 body {
     background-color: green;
 }
-#wrap {
-    width: 800px;
-    margin: 0 auto;
-}
 article {
     background-color: #fff;
 }
 
 .left,
-.right{
-    width: 50%;
-    float: left;
+.right {
     padding: 20px;
     box-sizing: border-box;
+}    
+
+/*--------------------------------------------------------*
+ * screen size 769pxà»è„ ( ipadà»è„ )
+ *--------------------------------------------------------*/
+@media screen and (min-width: 769px) {
+    #wrap {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .left,
+    .right{
+        width: 50%;
+        float: left;
+    }
 }
