@@ -12,26 +12,29 @@
             <header>
                 <h1>ドライブ</h1>
             </header>
-            <article class="clearfix">
-                <div class="left">
-                    <button onclick="status()"> STATUS </button>
-                    <div id="car-make"></div>
-                    <div id="car-model"></div>
-                    <div id="car-gear"></div>
-                </div>
-                
-                <div class="right">
-                    <button onclick="shift_p()"> P </button>
-                    <button onclick="shift_r()"> R </button>
-                    <button onclick="shift_n()"> N </button>
-                    <button onclick="shift_d()"> D </button>
-                    <div> ギヤ: <span id="now-gear"></span></div>
-                    <button onclick="accel()">アクセル</button>
-                    <button onclick="brake()">ブレーキ</button>
-                    <div> 速度: <span id="speed"></span></div>
-                    <div><span id="err-mes"></span></div>
-                </div>
-                
+            <article>
+                <section class="view-area">
+                </section>
+                <section class="drive-area clearfix">
+                    <div class="left">
+                        <button class="wide-button" onclick="status()"> STATUS </button>
+                        <div id="car-make"></div>
+                        <div id="car-model"></div>
+                        <div id="car-gear"></div>
+                    </div>
+                    
+                    <div class="right">
+                        <button class="small-button" onclick="shift_p()"> P </button>
+                        <button class="small-button" onclick="shift_r()"> R </button>
+                        <button class="small-button" onclick="shift_n()"> N </button>
+                        <button class="small-button" onclick="shift_d()"> D </button>
+                        <div> ギヤ: <span id="now-gear"></span></div>
+                        <button class="wide-button" onclick="accel()">アクセル</button>
+                        <button class="wide-button" onclick="brake()">ブレーキ</button>
+                        <div> 速度: <span id="speed"></span></div>
+                        <div><span id="err-mes"></span></div>
+                    </div>
+                </section>
             </article>
             <footer>
                 <small>&copy; 2017 Seiichi Nukayama</small>

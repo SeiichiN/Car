@@ -12,12 +12,27 @@ body {
 article {
     background-color: #fff;
 }
+.view-area {
+    height: 200px;
+}
+.drive-area {
+    background-color: #2f4f4f;
+    color: #eee;
+}
 
 .left,
 .right {
     padding: 20px;
     box-sizing: border-box;
-}    
+}
+.small-button {
+    width: 45px;
+    height: 45px;
+}
+.wide-button {
+    width: 100px;
+    height: 45px;
+}
 
 /*--------------------------------------------------------*
  * screen size 769pxà»è„ ( ipadà»è„ )
