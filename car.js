@@ -20,6 +20,8 @@ class Car {
     get userSpeed() { return this._speed; }
     accel() {
         this._speed++;
+        if (this._speed > 7)
+            this._speed = 7;
         // return this._speed;
     }
     brake() {
@@ -91,11 +93,20 @@ function accel() {
     car1.accel();
     let target = document.getElementById('speed');
     target.innerHTML = `${car1.userSpeed}`;
+    insert_meter(car1.userSpeed);
 }
 function brake() {
     car1.brake();
     let target = document.getElementById('speed');
     target.innerHTML = `${car1.userSpeed}`;
+    insert_meter(car1.userSpeed);
+}
+function insert_meter(speed) {
+    let now_speed = speed * 20;
+    let img = `${now_speed}.jpg`;
+    let target = document.getElementById('meter');
+    target.innerHTML = `<img src="${img}" alt="">`;
+//    target.innerHTML = '<img src="`${img}`" alt="">';
 }
 function status() {
     let target1 = document.getElementById("car-make");

@@ -19,6 +19,14 @@ article {
 .view-area {
     height: 200px;
 }
+#meter{
+    float: right;
+    margin: 5px;
+}
+
+img {
+    width: 150px;
+}
 .drive-area {
     background-color: #2f4f4f;
     color: #eee;
