@@ -86,8 +86,11 @@ function shift_d() {
     pr_gear();
 }
 function pr_gear(){
-    let target = document.getElementById("now-gear");
-    target.innerHTML = `${car1.userGear}`;
+    let img = car1.userGear + '.jpg';
+    let target = document.getElementById("shift");
+    target.innerHTML = `<img src="${img}" alt="">`;
+//    let target = document.getElementById("now-gear");
+//    target.innerHTML = `${car1.userGear}`;
 }
 function accel() {
     car1.accel();
