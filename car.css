@@ -8,46 +8,60 @@
 img {
     max-width: 100%;
 }
+video {
+    max-width: 100%;
+}
 body {
     background-color: green;
+    font-family: sans-serif;
 }
 h1 {
 	font-size: 16px;
 	margin: 0;
 }
 article {
-    background-color: #fff;
+    background-color: #333;
 }
 .view-area {
-    height: 200px;
+    width: 100%;
 }
-#meter{
-    width: 150px;
-    float: left;
-    margin: 5px;
-}
-#shift {
-    width: 100px;
-    float: right;
-    margin: 5px;
-}
+
 .drive-area {
     background-color: #2f4f4f;
     color: #eee;
 }
+.left {
+    width: 170px;
+    float: left;
+}
+
+.right {
+    width: 120px;
+    float: right;
+}
 
 .left,
 .right {
-    padding: 20px;
+    padding: 5px;
     box-sizing: border-box;
 }
-.small-button {
-    width: 45px;
-    height: 45px;
+#meter {
+    width: 160px;
+    height: 100px;
+}
+.lever {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.lever-button {
+    width: 100px;
+    height: 25px;
 }
 .wide-button {
-    width: 100px;
+    width: 70px;
     height: 45px;
+    padding: 0;
 }
 
 /*--------------------------------------------------------*
